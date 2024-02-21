@@ -1,0 +1,34 @@
+@use "@material/dialog";
+@use "@material/icon-button";
+@use "@material/ripple";
+
+@import "@material/icon-button/mdc-icon-button";
+@import "../color.scss";
+@import "../fonts.scss";
+
+.mdc-icon-button {
+    @include ripple.surface;
+    @include ripple.radius-unbounded;
+    @include ripple.states;
+}
+
+// @import './form.scss';
+
+#wall-payment-dialog {
+
+    @import './form.scss';
+
+    font-family: 'CaskaydiaCove Nerd Font' !important;
+    color: $color_accent;
+    background-color: $color-dialog-opaque;
+    @include dialog.scrim-color($color-dialog-opaque);
+    @include dialog.container-fill-color($color_container);
+    @include dialog.content-ink-color($color_accent);
+    @include dialog.shape-radius(10px);
+    @include dialog.max-width(1300px, 16px);
+
+    .mdc-dialog__surface {
+        outline: 2px solid $color_container--a40;
+    }
+
+}

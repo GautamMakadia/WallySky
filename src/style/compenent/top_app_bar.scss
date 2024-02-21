@@ -1,0 +1,99 @@
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/top-app-bar";
+
+@use "@material/ripple";
+
+@use "@material/menu-surface";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/menu";
+
+@use "@material/button/styles";
+@use "@material/icon-button";
+@import "@material/icon-button/mdc-icon-button";
+
+
+@import '../color.scss';
+@import '../fonts.scss';
+
+#top-app-bar {
+
+    .mdc-top-app-bar__row {
+
+        @include top-app-bar.fill-color($color_container);
+        @include top-app-bar.ink-color($color_text--titel_medium);
+        @include top-app-bar.icon-ink-color($color_text--titel_medium);
+        
+        
+        .mdc-top-app-bar__title {
+            font-family: 'CaskaydiaCove Nerd Font' !important;
+            font-size: larger;
+            padding-inline-start: 10px;
+        }
+    
+        // .mdc-icon-button {
+        //     @include ripple.surface;
+        //     @include ripple.radius-unbounded;
+        //     @include ripple.states;
+        // }
+    
+        .mdc-icon-button--on {
+            font-variation-settings: 'FILL' 1 !important;
+        }
+    
+        .mdc-button--icon-leading {
+            font-family: 'CaskaydiaCove Nerd Font' !important;
+            font-size: larger
+        }
+        
+    
+        .disabled {
+            display: none;
+        }
+    }
+    
+
+    .mdc-menu {
+        @include menu.width(3);
+        @include menu-surface.ink-color($color_accent);
+        @include menu-surface.fill-color($color_container);
+        
+        .mdc-list-item__text {
+            font-family: 'CaskaydiaCove Nerd Font' !important;
+            font-size: medium;
+        }
+
+        .mdc-list-item--disabled {
+            display: none;
+        }
+        
+        ul {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            color: $color_accent !important;
+
+            li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+
+
+            .mdc-menu-icon {
+               
+                margin-right: 10px;
+            }
+        }
+        // @include menu.min-width(3);
+    }
+
+    .mdc-button__ripple{
+        @include ripple.states-base-color($color_accent);
+        @include ripple.radius-unbounded;
+    }
+
+    
+    box-shadow: 2px 0px 10px 5px $color_container--a30;
+   
+}

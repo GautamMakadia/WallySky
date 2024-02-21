@@ -1,0 +1,16 @@
+@import '../color.scss';
+@import '../fonts.scss';
+
+
+@font-face {
+    font-family: "CaskaydiyaCov Nerd Font";
+    src: url('../fonts/CaskaydiaCoveNerdFontMono-Regular.ttf');
+}
+
+
+#pending-walls {
+    display: grid;
+    grid-template-columns: 5fr 10fr 10fr 10fr 10fr 5fr 5fr 5fr;
+
+
+}

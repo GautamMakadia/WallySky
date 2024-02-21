@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://localhost:3000/api/cyclone-svgrepo-com.png" type="image/png">
+    <title>WallySky - Home</title>
+</head>
+
+<style>
+    /* #category-chip-container.disabled {
+        display: none;
+    } */
+
+    body.disabled {
+        display: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+<body class="disabled">
+
+    <header id="top-app-bar" class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <!-- <button id='nav-menu-btn'
+                    class="mdc-top-app-bar__navigation-icon mdc-icon-button material-symbols-rounded"
+                    aria-label="Open navigation menu" aria-pressed="false">
+                    menu
+                </button> -->
+                <!-- <img id="site-logo" src="./images/cyclone-svgrepo-com" style="width: 50px; height: fit-content;" alt=""></img> -->
+
+                <span>
+                    <svg width="25px" height="25px" viewBox="0 0 128 128" aria-hidden="true" role="img"
+                        class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+                        <path
+                            d="M65.79 57.85c-2.04 2.3-1.21 5.16-.07 6.57c2.13 2.64 5.29 2.79 6.97 6.12c1.48 2.93.59 8.25-5.96 8.69s-13.05-4.88-14.43-11.2c-1.71-7.85.63-16.61 9.88-21.1s21.4-2.18 28.11 5.01c6.94 7.42 11.86 17.04 8.54 30.96s-17.9 25.82-40.73 23.45c-18.8-1.95-36.11-18.96-35.28-44.64c.81-25.02 21.6-40.36 41.13-43.45c20.19-3.19 34.42 5.47 42.73 12.08c5.17 4.12 9.62 8.72 10.9 10.13c1.78 1.96 4.48 2.06 4.85-1.08c.49-4.15-2.09-9.81-8.11-16.91c-6.02-7.09-23.48-20.88-52.14-18.2C18.08 8.39 2.89 47.62 5.9 72.01s20.3 51.23 60.24 52.07c24.42.51 43.29-14.96 49.16-35.43c3.25-11.33 2.23-25.66-4.64-36.82c-9.23-14.97-19.76-21.05-34.16-22.5c-11.53-1.16-22.47 2.17-29.67 8.64c-14.7 13.2-15.15 37.01.17 48.95c8.09 6.31 17.73 7.47 25.14 5.18c5.09-1.57 9.53-4.28 12.14-9.34c3.1-6.02 2.8-11.93.66-16.56c-1.77-3.84-5.52-7.07-8.79-8.72c-4.93-2.47-8.44-1.79-10.36.37z"
+                            fill="#1f87fd"></path>
+                    </svg>
+                </span>
+
+                <span class="mdc-top-app-bar__title">
+                    WallySky
+                </span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+
+
+                <button id="nav-upload-action" class="mdc-top-app-bar__action-item mdc-button mdc-button--icon-leading "
+                    aria-label="Upload Wallpaper" aria-pressed="false">
+                    <span class="mdc-button__ripple"></span>
+                    <i class="material-icons mdc-button__icon material-symbols-rounded" aria-hidden="true">upload</i>
+                    <span class="mdc-button__label">Upload</span>
+                </button>
+
+                <button id="nav-login-action"
+                    class="mdc-top-app-bar__action-item mdc-button mdc-button--icon-leading disabled" aria-label="Login"
+                    aria-pressed="false">
+                    <span class="mdc-button__ripple"></span>
+                    <i class="material-icons mdc-button__icon material-symbols-rounded" aria-hidden="true">person</i>
+                    <span class="mdc-button__label">Login</span>
+                </button>
+
+
+                <button id="nav-fav-action"
+                    class="mdc-top-app-bar__action-item mdc-icon-button material-symbols-rounded disabled"
+                    aria-label="Favorite" aria-pressed="false">
+                    favorite
+
+                </button>
+
+                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button material-symbols-rounded"
+                    aria-label="Search" aria-pressed="false">
+                    search
+                </button>
+
+                <div id="more-menu" class="mdc-menu-surface--anchor">
+                    <button id="nav-more-menu"
+                        class="material-icons mdc-top-app-bar__action-item mdc-icon-button material-symbols-rounded mdc-menu-surface--anchor"
+                        aria-label="Options" aria-pressed="false">
+                        more_vert
+                    </button>
+                    <div class="mdc-menu mdc-menu-surface">
+                        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+                            <li class="mdc-list-item mdc-list-item--disabled" role="menuitem" id="menu-logout">
+                                <span class="mdc-list-item__ripple"></span>
+                                <span class="material-symbols-rounded mdc-menu-icon">logout</span>
+                                <span class="mdc-list-item__text">Log Out</span>
+                            </li>
+                            <li class="mdc-list-item" role="menuitem" id="menu-aboutus">
+                                <span class="mdc-list-item__ripple"></span>
+                                <span class="material-symbols-rounded mdc-menu-icon">info</span>
+                                <span class="mdc-list-item__text">About Us</span>
+                            </li>
+
+                            <li class="mdc-list-item mdc-list-item--disabled" role="menuitem" id="menu-user">
+                                <span class="mdc-list-item__ripple"></span>
+                                <span class="material-symbols-rounded mdc-menu-icon">person</span>
+                                <span id="menu-user-name" class="mdc-list-item__text">Username</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <span id="category-chip-container" class="chip-set-group mdc-evolution-chip-set disabled">
+
+            <span id="category-chip-const" class="mdc-evolution-chip-set" role="listbox" aria-orientation="horizontal"
+                aria-multiselectable="true">
+                <span
+                    class="mdc-evolution-chip mdc-evolution-chip__cell--primary mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--selectable"
+                    role="presentation" id="chip-all">
+                    <span class="mdc-evolution-chip__action  mdc-evolution-chip__action--primary" role="option"
+                        id="chip-action-all" aria-selected="false" tabindex="0">
+                        <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+                        <span class="mdc-evolution-chip__graphic">
+                            <span class="mdc-evolution-chip__checkmark">
+                                <svg class="mdc-evolution-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                                    <path class="mdc-evolution-chip__checkmark-path" fill="none" stroke="black"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="mdc-evolution-chip__text-label">All</span>
+                    </span>
+                </span>
+            </span>
+
+
+
+            <span id="category-chip" class="mdc-evolution-chip-set" role="listbox" aria-orientation="horizontal"
+                aria-multiselectable="true">
+                <span
+                    class="mdc-evolution-chip mdc-evolution-chip__cell--primary mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--selectable"
+                    role="presentation" id="chip-sky">
+                    <span class="mdc-evolution-chip__action  mdc-evolution-chip__action--primary" role="option"
+                        id="chip-action-sky" aria-selected="false" tabindex="0">
+                        <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+                        <span class="mdc-evolution-chip__graphic">
+                            <span class="mdc-evolution-chip__checkmark">
+                                <svg class="mdc-evolution-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                                    <path class="mdc-evolution-chip__checkmark-path" fill="none" stroke="black"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="mdc-evolution-chip__text-label">Sky</span>
+                    </span>
+                </span>
+
+                <span
+                    class="mdc-evolution-chip mdc-evolution-chip__cell--primary mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--selectable "
+                    role="presentation" id="chip-nature">
+                    <span class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" role="option"
+                        id="chip-action-nature" aria-selected="false" tabindex="0">
+                        <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+                        <span class="mdc-evolution-chip__graphic">
+                            <span class="mdc-evolution-chip__checkmark">
+                                <svg class="mdc-evolution-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                                    <path class="mdc-evolution-chip__checkmark-path" fill="none" stroke="black"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="mdc-evolution-chip__text-label">Nature</span>
+                    </span>
+                </span>
+                <span
+                    class="mdc-evolution-chip mdc-evolution-chip__cell--primary mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--selectable"
+                    role="presentation" id="chip-car">
+                    <span class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" role="option"
+                        id="chip-action-cars" aria-selected="false" tabindex="0">
+                        <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+                        <span class="mdc-evolution-chip__graphic">
+                            <span class="mdc-evolution-chip__checkmark">
+                                <svg class="mdc-evolution-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                                    <path class="mdc-evolution-chip__checkmark-path" fill="none" stroke="black"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="mdc-evolution-chip__text-label">Cars</span>
+                    </span>
+                </span>
+                <span
+                    class="mdc-evolution-chip mdc-evolution-chip__cell--primary mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--selectable"
+                    role="presentation" id="chip-city">
+                    <span class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" role="option"
+                        id="chip-action-city" aria-selected="false" tabindex="0">
+                        <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+                        <span class="mdc-evolution-chip__graphic">
+                            <span class="mdc-evolution-chip__checkmark">
+                                <svg class="mdc-evolution-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                                    <path class="mdc-evolution-chip__checkmark-path" fill="none" stroke="black"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="mdc-evolution-chip__text-label">City</span>
+                    </span>
+                </span>
+                <span
+                    class="mdc-evolution-chip mdc-evolution-chip__cell--primary mdc-evolution-chip--with-primary-graphic mdc-evolution-chip--selectable"
+                    role="presentation" id="chip-cats">
+                    <span class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" role="option"
+                        id="chip-action-cats" aria-selected="false" tabindex="0">
+                        <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
+                        <span class="mdc-evolution-chip__graphic">
+                            <span class="mdc-evolution-chip__checkmark">
+                                <svg class="mdc-evolution-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                                    <path class="mdc-evolution-chip__checkmark-path" fill="none" stroke="black"
+                                        d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span class="mdc-evolution-chip__text-label">Cats</span>
+                    </span>
+                </span>
+            </span>
+
+
+        </span>
+
+
+    </header>
+
+    <main id="main-content" class="mdc-top-app-bar--fixed-adjust">
+        <ul id="my-image-list" class="mdc-image-list mdc-image-list--masonry my-masonry-image-list "></ul>
+    </main>
+
+    <div id="max-wall-dialog" class="mdc-dialog">
+        <div class="mdc-dialog__container">
+            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+                aria-describedby="my-dialog-content">
+                <div class="mdc-dialog__actions">
+                    <button class="material-icons material-icons mdc-icon-button material-symbols-rounded"
+                        id="dialog-close-btn" aria-pressed="false" data-mdc-dialog-action="Close">
+                        close
+                    </button>
+                </div>
+                <div class="dialog-container">
+                    <img class="max-img" id="dialog-wall-img">
+                    </img>
+                    <div class="content-disp ">
+                        <div class="content-disp-left">
+                            <span class="content-item dialog-titel" id="dialog-wall-title">Title</span>
+                            <span class="content-item dialog-artist" id="dialog-wall-artist">Artist</span>
+                        </div>
+
+                        <div class="content-disp-right">
+                            <button type="button"
+                                class="material-icons content-item material-icons mdc-icon-button material-symbols-rounded"
+                                id="dialog-fav-btn" aria-pressed="false">
+                                favorite
+                            </button>
+
+                            <button id="dialog-payment-btn" type="button"
+                                class="content-item mdc-button mdc-button--icon-leading mdc-button--outlined disabled"
+                                aria-pressed="false">
+                                <div class="mdc-button__ripple"></div>
+                                <i class="material-icons mdc-button__icon material-symbols-rounded"
+                                    aria-hidden="true">currency_rupee</i>
+                                <span class="mdc-button__label">Pay To Download</span>
+                            </button>
+                            <button type="button"
+                                class="material-icons content-item material-icons mdc-icon-button material-symbols-rounded disabled"
+                                id="dialog-down-btn" aria-pressed="false">
+                                download
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div id="payment-content" class="secondry-content disabled">
+                        <form id="payment-form" class="form">
+                            <div class="form-group">
+                                <label for="upi_id">UPI ID :</label>
+                                <input type="text" id="upi_id" name="upi_id" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <lable id="price"></lable>
+                            </div>
+                            <input class="form-btn-main" id="payment" type="submit" name="payment" value="Make Payment">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="upload-wall-dialog" class="mdc-dialog">
+        <div class="mdc-dialog__container">
+            <div class="mdc-dialog__surface" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title"
+                aria-describedby="my-dialog-content">
+                <div class="upload-wall-container">
+                    <div class="mdc-dialog__actions">
+                        <button id="upload-dialog-close-btn" class="mdc-icon-button material-symbols-rounded disabled"
+                            aria-label="Favorite" aria-pressed="false" data-mdc-dialog-action="Close">
+                            close
+
+                        </button>
+                    </div>
+                    <div id="drop-aria" class="drag-area">
+                        <div class="icon">
+                            <span class="material-symbols-rounded">
+                                cloud_upload
+                            </span>
+                        </div>
+                        <span id="drop-aria-lable" class="text-disc normal">Drag & Drop to Upload File</span>
+                        <span class="or">OR</span>
+                        <button id="select-wall-btn" type="button"
+                            class="mdc-button mdc-button--raised mdc-button--icon-leading" aria-label="Select File"
+                            aria-pressed="false">
+                            <div class="mdc-button__ripple"></div>
+                            <span class="mdc-button__touch"></span>
+                            <i class=" mdc-button__icon material-symbols-rounded" aria-hidden="true">upload</i>
+                            <span class="mdc-button__label">Select Image</span>
+                        </button>
+                    </div>
+
+                    <div id="upload-form-container" class="disabled">
+                        <img id="upload-img" alt="wallpaper to be uploaded">
+                        <form id="upload-form" class="">
+                            <div class="form-group">
+                                <label for="title">Wallpaper Title</label>
+                                <input type="text" id="wall_title" name="title" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cat">Category</label>
+                                <input type="text" id="cat" name="cat" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="price">Price</label>
+                                <input type="text" id="price" name="is_prem" value="0" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input id="upload" class="form-btn-main" type="submit" name="upload" value="Upload">
+                            </div>
+
+
+                            <input type="file" name="wallpaper" style="display: none;" id="wallpaper-input">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <ul id="my-image-list" class="mdc-image-list my-image-list"></ul> -->
+</body>
+
+</html>

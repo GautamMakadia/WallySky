@@ -1,0 +1,79 @@
+@use "@material/dialog";
+
+
+@import '../fonts.scss';
+@import '../color.scss';
+
+@include dialog.core-styles;
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font';
+    src: url('../../style/fonts/CaskaydiaCoveNerdFontMono-Regular.ttf');
+}
+
+body {
+    font-family: 'CaskaydiaCove Nerd Font' !important;
+    background-color: $color_surface;
+    color: $color_accent;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $color_container;
+    padding: 20px;
+    position: absolute;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left:50%;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px rgb(172, 172, 172, 0.2);
+}
+
+.max-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.content-disp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.content-disp-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-disp-right {
+    display: flex;
+    flex-direction: row;
+    justify-items: right;
+    align-items: flex-end;
+
+    .content-item {
+        color: $color_accent;
+        margin: 10px;
+    }
+}
+
+.mdc-dialog__container {
+    padding: 20px;
+}
+
+#dow-btn {
+    pointer-events: all;
+    cursor: pointer;
+}

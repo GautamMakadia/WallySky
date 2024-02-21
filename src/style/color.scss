@@ -1,0 +1,33 @@
+
+$color_surface: rgb(230, 230, 230);
+
+/**
+    Color Continaer
+*/
+$color_container: rgb(243, 243, 243);
+$color_container--activated:  rgba(214, 214, 255, 0.822);
+$color_container--a90: rgba(246, 248, 253, 0.900);
+$color_container--a80: rgba(246, 248, 253, 0.800);
+$color_container--a70: rgba(246, 248, 253, 0.700);
+$color_container--a60: rgba(246, 248, 253, 0.600);
+$color_container--a50: rgba(246, 248, 253, 0.500);
+$color_container--a40: rgba(246, 248, 253, 0.400);
+$color_container--a30: rgba(246, 248, 253, 0.300);
+$color_container--a20: rgba(246, 248, 253, 0.200);
+$color_container--a10: rgba(246, 248, 253, 0.100);
+$color_container--hover: rgba(22, 52, 245, 0.144);
+
+$color_button: rgba(214, 214, 255, 0.822);
+$color_on_button: rgb(214, 214, 255);
+$color_ripple: rgba(22, 52, 245, 0.144);
+
+$color_accent: rgb(0, 0, 133);
+$color_on_accent: rgb(214, 214, 255);
+
+
+$color_text--titel_medium: $color_accent; //rgba(1, 1, 153, 0.781)
+$color_text--discription_medium: rgba(0, 0, 63, 0.623);
+
+$color_text--error: red;
+
+$color-dialog-opaque: rgba(0, 0, 0, 0.479);

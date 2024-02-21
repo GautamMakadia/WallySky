@@ -1,0 +1,90 @@
+@use '@material/card';
+@use "@material/icon-button";
+@use "@material/ripple";
+
+@import "@material/icon-button/mdc-icon-button";
+
+@import '../color.scss';
+
+@include card.core-styles;
+
+.image-card.disabled {
+    display: none;
+}
+
+.image-card {
+
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    padding: 10px;
+    @include card.fill-color($color_container); // rgb(247, 255, 250) rgb(226, 233, 251)
+    // backdrop-filter: blur(33px);
+    // background-blend-mode: overlay;
+    @include card.shape-radius(10px);
+    box-shadow: 0 0 20px 10px rgba(172, 172, 172, 0.2); //rgb(213 213 213 / 20%)
+
+
+    pointer-events: all;
+
+    img {
+        border-radius: 7px;
+    }
+
+
+    .card-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .card-info-left {
+            display: flex;
+            flex-direction: column;
+
+            .card-title {
+                font-size: inherit;
+                font-weight: bold;
+                margin: 10px 0 0 0;
+                color: $color_text--titel_medium;
+            }
+
+            .card-artist {
+                margin-top: 10px;
+                font-size: inherit;
+                font-weight: bold;
+                color: $color_text--discription_medium;
+            }
+        }
+
+        .card-info-right {
+            display: flex;
+            flex-direction: column;
+
+
+            .fav-btn {
+                @include icon-button.ink-color($color_accent);
+                @include ripple.surface;
+                @include ripple.radius-unbounded;
+                @include ripple.states;
+            }
+
+
+            .fav-btn.mdc-icon-button--on  {
+                font-variation-settings:
+                    'FILL' 1 !important;
+            }
+        }
+
+    }
+
+
+
+    &:hover {
+        cursor: pointer;
+        transition: transform .25s ease-out;
+        background-color: $color_container--hover;
+        transition-delay: 500ms;
+        transition-property: transform,  box-shadow, background-color, transition;
+        transform: scale3d(1.03, 1.03, 1.03) ;
+        box-shadow: 0px 0px 20px 7px rgb(169 170 183); //rgb(238, 255, 244)
+    }
+}

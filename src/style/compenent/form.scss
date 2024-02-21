@@ -1,0 +1,141 @@
+@import '../fonts.scss';
+@import '../color.scss';
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font';
+    src: url('../fonts/CaskaydiaCoveNerdFontMono-Regular.ttf');
+}
+
+body {
+    font-family: 'CaskaydiaCove Nerd Font' !important;
+    background-color: $color_surface;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../image/Galaxy_Wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#page-heading {
+    color: $color_on_accent;
+    margin-bottom: 60px;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: $color_container--a10;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px $color_container--a10;
+    backdrop-filter: blur(10px) !important;
+    background-blend-mode:overlay;
+
+    h1 {
+        color: $color_on_accent;
+        align-self: center;
+        margin: 30px 0px 30px 0px;
+    }
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    label {
+        // font-weight: bold;
+        font-size: large;
+        margin-bottom: 5px;
+        color: $color_on_accent;
+        align-self: flex-start;
+        display: block;
+    }
+
+    input,
+    input[type="email"],
+    input[type="text"],
+    input[type="password"],
+    input[type="conf_password"] {
+        font-size: large;
+        color: $color_on_accent;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        background-color: $color_container--a20;
+        border: 0px solid $color_container;
+        border-radius: 5px;
+    }
+
+
+    .form-btn-main {
+        font-family: 'CaskaydiaCove Nerd Font' !important;
+        align-self: center;
+        margin: 10px;
+        padding: 10px;
+        max-width: 100px;
+        border: none;
+        border-radius: 5px;
+        background-color: $color_on_accent;
+        color: $color_accent;
+        cursor: pointer;
+    
+        &:hover {
+            // background-color: $color_container;
+            transition: transform .25s ease-out;
+            transform: scale3d(1.05, 1.05, 1.05);
+        }
+    }
+
+    .ext-link {
+        // font-weight: bold;
+        font-size: large;
+        margin-top: 10px;
+        align-self: center;
+        color: $color_on_accent;
+        
+        a {
+            color: $color_on_accent;
+        }
+    }
+}
+
+
+
+/* .form-group input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  } */
+
+
+
+/* .form-group input[type="submit"]:hover {
+    background-color: #45a049;
+  } */
+
+
+

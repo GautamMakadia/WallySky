@@ -1,0 +1,108 @@
+@use "@material/image-list/mdc-image-list";
+@use "@material/image-list";
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+@use "@material/chips/styles";
+@use "@material/ripple";
+
+
+@import "../color.scss";
+@import "../fonts.scss";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+@import "../color.scss";
+@import "../fonts.scss";
+
+@import '../compenent/top_app_bar.scss';
+@import '../compenent/image_cards.scss';
+@import '../compenent/choise_chips.scss';
+@import '../compenent/max-dialog.scss';
+@import '../compenent/upload_form.scss';
+
+
+@font-face {
+    font-family: 'CaskaydiaCove Nerd Font';
+    src: url('../../style/fonts/CaskaydiaCoveNerdFontMono-Regular.ttf');
+}
+
+body {
+
+    font-family: 'CaskaydiaCove Nerd Font' !important;
+    src: url('../../style/fonts/CaskaydiaCoveNerdFontMono-Regular.ttf');
+
+    background-color: $color_surface;
+}
+
+
+
+
+
+.my-masonry-image-list {
+    
+    padding-bottom: 50px;
+    
+    .mdc-image-list__item {
+        padding: 5px;
+    }
+
+    @include image-list.masonry-columns(3);
+
+    @media (max-width: 600px) {
+        @include image-list.masonry-columns(1, 5px);
+        .mdc-image-list__item {
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1080px) {
+        @include image-list.masonry-columns(2, 8px);
+        .mdc-image-list__item {
+            padding: 5px;
+            margin-bottom: 8px;
+        }
+    }
+    
+    max-width: 95%;
+    margin-top: 70px;
+}
+
+.my-masonry-image-list.image-list-fav {
+    li:not(.wall-fav-item) {
+        display: none;
+    }
+}
+
+
+.my-masonry-image-list.selection {
+    li:not(.enabled) {
+        display: none;
+    }
+
+    li.enabled {
+        color: brown;
+    }
+}
+
+
+
+
+.mdc-button__ripple{
+    @include ripple.states-base-color($color_accent);
+}
+
+.mdc-icon-button {
+    @include ripple.surface;
+    @include ripple.radius-unbounded;
+    @include ripple.states;
+}
+
+
+
