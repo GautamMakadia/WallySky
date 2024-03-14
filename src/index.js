@@ -233,8 +233,8 @@ const setUpChipSet = () => {
                     removeListFilter(site_state.active_filter)
                     break
 
-                case 'chip-cat':
-                    console.log('chip-cat')
+                case 'chip-cats':
+                    console.log('chip-cats')
                     delete site_state.active_filter['cat']
                     removeListFilter(site_state.active_filter)
                     break
@@ -266,7 +266,7 @@ const setUpChipSet = () => {
                     addListFilter(site_state.active_filter)
                     break;
                 case 'chip-cats':
-                    console.log('chip-cat')
+                    console.log('chip-cats')
                     site_state.active_filter['cat'] = 'cat'
                     addListFilter(site_state.active_filter)
                     break;
